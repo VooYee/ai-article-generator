@@ -1,0 +1,67 @@
+{
+  "name": "Plumbing Service Template",
+  "version": "1.0",
+  "template": {
+    "sections": [
+      {
+        "type": "header",
+        "content": "[vc_row full_width=\"stretch_row\" wpex_bg_overlay=\"color\" css=\".vc_custom_1545397509808&#123;margin-bottom: 40px !important;padding-top: 40px !important;background: #f1f1f4 url(https://www.prontointerventoidraulico24.it/wp-content/uploads/2018/12/1.jpg?id=2453) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;&#125;\" wpex_bg_overlay_color=\"#000000\"][vc_column][vc_raw_html]JTNDc2NyaXB0JTNFJTBBJTIwJTIwZ3RhZyUyOCUyN2NvbmZpZyUyNyUyQyUyMCUyN0FXLTE2OTk1MDkyMjM2JTJGQld5MUNMNnprTGNhRUl5TzhxY18lMjclMkMlMjAlN0IlMEElMjAlMjAlMjAlMjAlMjdwaG9uZV9jb252ZXJzaW9uX251bWJlciUyNyUzQSUyMCUyNzA1NDMxNzk2Njk0JTI3JTBBJTIwJTIwJTdEJTI5JTNCJTBBJTNDJTJGc2NyaXB0JTNF[/vc_raw_html][vc_row_inner][vc_column_inner offset=\"vc_hidden-xs\"][vc_empty_space][/vc_column_inner][/vc_row_inner][vc_row_inner][vc_column_inner][vc_column_text]<h1 style=\"text-align: center;\"><strong><span style=\"font-size: 1.4em; font-family: helvetica; color: #fff;\">{h1}</span></strong></h1>[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+      },
+      {
+        "type": "services",
+        "content": "[vc_row][vc_column][vc_row_inner equal_height=\"yes\" content_placement=\"middle\"][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"ARIA<br>CONDIZIONATA\" style=\"four\" heading_type=\"div\" icon=\"fa fa-snowflake-o\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"SOS<br>IDRAULICO\" style=\"four\" heading_type=\"div\" icon=\"fa fa-home\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"ASSISTENZA<br>CALDAIE\" style=\"four\" heading_type=\"div\" icon=\"fa fa-sun-o\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"MANUTENZIONE<br>SCALDABAGNI\" style=\"four\" heading_type=\"div\" icon=\"fa fa-asterisk\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"PERDITE<br>TUBATURE\" style=\"four\" heading_type=\"div\" icon=\"fa fa-tint\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/6\" offset=\"vc_col-xs-6\"][vcex_icon_box heading=\"RIPARAZIONE<br>SANITARI\" style=\"four\" heading_type=\"div\" icon=\"fa fa-bath\" text_align=\"center\" content_alignment=\"center\" icon_color=\"#000000\" heading_color=\"#000000\" hover_animation=\"float-shadow\"][/vcex_icon_box][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+      },
+      {
+        "type": "intro",
+        "content": "[vc_row bg_style=\"stretch\" css=\".vc_custom_1528886968017&#123;margin-bottom: 20px !important;padding-top: 30px !important;&#125;\"][vc_column][vcex_heading text=\"Pronto intervento idraulico {Comune}\" tag=\"h2\" text_align=\"center\" color=\"#333333\"][vcex_spacing size=\"5px\"][vc_column_text text_align=\"center\" color=\"#aaaaaa\"]<span style=\"font-family: verdana, geneva; font-size: 17px;\">Reperibilità 24 ore su 24, 7 giorni su 7, per ogni pronto intervento idraulico in tutto il territorio provinciale di {Comune}, anche durante le festività e il mese di agosto. Siamo a completa disposizione della clientela per ogni emergenza idraulica!</span>[/vc_column_text][vcex_divider color=\"#888888\" width=\"40px\" margin_top=\"30px\" icon_color=\"#000000\" icon_size=\"14px\" height=\"1px\"][/vc_column][/vc_row]"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_1}{paragraph_2}{paragraph_3}"
+      },
+      {
+        "type": "emergency",
+        "content": "[vc_row][vc_column][vc_row_inner equal_height=\"yes\"][vc_column_inner width=\"1/3\" css=\".vc_custom_1545397971237&#123;background-image: url(https://www.prontointerventoidraulico24.it/wp-content/uploads/2018/12/rip-idrauliche.jpg?id=2430) !important;background-size: cover !important;&#125;\"][/vc_column_inner][vc_column_inner width=\"1/3\"][vc_column_text]<h3 style=\"text-align: center;\">Emergenza Idraulica</h3><p>Hai bisogno di un idraulico urgente? Il nostro team è disponibile 24 ore su 24 per risolvere qualsiasi emergenza, dalle perdite d'acqua agli allagamenti improvvisi.</p>[/vc_column_text][vcex_button url=\"tel:800729233\" align=\"center\" style=\"outline\" border=\"2px solid #06b9cb\" custom_color=\"#06b9cb\" custom_hover_color=\"#ffffff\"]Chiama 800729233[/vcex_button][/vc_column_inner][vc_column_inner width=\"1/3\" css=\".vc_custom_1545398001441&#123;background-image: url(https://www.prontointerventoidraulico24.it/wp-content/uploads/2018/12/sos-idraulico.jpg?id=2427) !important;background-size: cover !important;&#125;\"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+      },
+      {
+        "type": "content",
+        "content": "[vc_row][vc_column]{paragraph_4}{paragraph_5}{paragraph_6}[/vc_column][/vc_row]"
+      },
+      {
+        "type": "features",
+        "content": "[vc_row][vc_column][vc_row_inner equal_height=\"yes\" el_class=\"shadow1\" css=\".vc_custom_1545401280724&#123;padding-top: 10px !important;background-image: url(https://www.prontointerventoidraulico24.it/wp-content/uploads/2018/01/idraulico-h24.jpg?id=1548) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;&#125;\"][vc_column_inner width=\"1/3\"][vcex_icon_box heading=\"Riparazioni Idrauliche\" heading_type=\"div\" icon=\"fa fa-cogs\" heading_size=\"18px\" image=\"76\" icon_color=\"#ff6000\" heading_color=\"#000000\"]<p style=\"text-align: justify;\"><span style=\"font-family: verdana, geneva, sans-serif;\">I tecnici con cui collaboriamo sono in grado effettuare qualsiasi tipo di riparazione idraulica. Interventi idraulici di emergenza 24 ore su 24.</span></p>[/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/3\"][vcex_icon_box heading=\"Interventi Tempestivi!\" heading_type=\"div\" icon=\"fa fa-clock-o\" heading_size=\"18px\" image=\"76\" icon_color=\"#ff6000\" heading_color=\"#000000\"]<p style=\"text-align: justify;\"><span style=\"font-family: verdana, geneva, sans-serif;\">Mettiamo a disposizione dei clienti i migliori idraulici di {Comune}. Interveniamo al più presto possibile dalla tua chiamata.</span></p>[/vcex_icon_box][/vc_column_inner][vc_column_inner width=\"1/3\"][vcex_icon_box heading=\"{Comune} e Provincia\" heading_type=\"div\" icon=\"fa fa-map-marker\" heading_size=\"18px\" image=\"76\" icon_color=\"#ff6000\" heading_color=\"#000000\"]<p style=\"text-align: justify;\"><span style=\"font-family: verdana, geneva, sans-serif;\">Reperibilità telefonica 24h e interventi tempestivi eseguiti da tecnici rapidi, attivi in tutta {Comune} e anche in provincia.</span></p>[/vcex_icon_box][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]"
+      },
+      {
+        "type": "content",
+        "content": "[vc_row][vc_column]{paragraph_7}{paragraph_8}{paragraph_9}{paragraph_10}[/vc_column][/vc_row]"
+      },
+      {
+        "type": "map",
+        "content": "[vc_row][vc_column]<iframe src=\"https://www.google.com/maps?q={Comune}&output=embed\" width=\"100%\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>[/vc_column][/vc_row]"
+      },
+      {
+        "type": "cta",
+        "content": "[vc_row full_width=\"stretch_row\" wpex_bg_overlay=\"color\" css=\".vc_custom_1545402328504&#123;background-image: url(https://www.prontointerventoidraulico24.it/wp-content/uploads/2018/10/riprazioni-idraulici-min.jpg?id=2182) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;&#125;\" wpex_bg_overlay_color=\"#000000\"][vc_column][vc_column_text css=\".vc_custom_1546945189200&#123;padding-top: 40px !important;&#125;\"]<p style=\"text-align: center;\"><span style=\"font-size: 1.5em;\"><strong><span style=\"font-family: verdana, geneva; color: #ffffff;\">PRONTO INTERVENTO IDRAULICO</span></strong></span></p>[/vc_column_text][vcex_button url=\"tel:800729233\" icon_left=\"fa fa-phone\" style=\"flat\" color=\"teal\" font_size=\"1.5em\" align=\"center\" font_padding=\"top:7px|right:15px|bottom:7px|left:15px\"]CHIAMA 800729233[/vcex_button][/vc_column][/vc_row]"
+      },
+      {
+        "type": "footer",
+        "content": "[vc_row][vc_column]<h2>Altri comuni serviti</h2>{internal_links}[/vc_column][/vc_row]"
+      }
+    ],
+    "variables": {
+      "h1": "",
+      "Comune": "",
+      "paragraph_1": "",
+      "paragraph_2": "",
+      "paragraph_3": "",
+      "paragraph_4": "",
+      "paragraph_5": "",
+      "paragraph_6": "",
+      "paragraph_7": "",
+      "paragraph_8": "",
+      "paragraph_9": "",
+      "paragraph_10": "",
+      "internal_links": ""
+    }
+  }
+}

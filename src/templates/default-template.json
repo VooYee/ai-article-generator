@@ -1,0 +1,75 @@
+{
+  "name": "Basic Article Template",
+  "version": "1.0",
+  "template": {
+    "sections": [
+      {
+        "type": "header",
+        "content": "<article>",
+        "children": [
+          {
+            "type": "meta",
+            "content": "<h1>{h1}</h1>"
+          }
+        ]
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_1}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_2}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_3}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_4}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_5}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_6}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_7}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_8}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_9}"
+      },
+      {
+        "type": "content",
+        "content": "{paragraph_10}"
+      },
+      {
+        "type": "footer",
+        "content": "</article>"
+      }
+    ],
+    "variables": {
+      "h1": "",
+      "paragraph_1": "",
+      "paragraph_2": "",
+      "paragraph_3": "",
+      "paragraph_4": "",
+      "paragraph_5": "",
+      "paragraph_6": "",
+      "paragraph_7": "",
+      "paragraph_8": "",
+      "paragraph_9": "",
+      "paragraph_10": ""
+    }
+  }
+}
