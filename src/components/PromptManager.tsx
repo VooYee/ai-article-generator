@@ -147,7 +147,7 @@ const PromptManager: React.FC = () => {
           </button>
         </div>
       </div>
-
+<!--
       <div className="space-y-6">
         <div className="space-y-4">
           <h3 className="font-medium text-gray-700">Meta Content Prompts</h3>
@@ -181,7 +181,7 @@ const PromptManager: React.FC = () => {
             </div>
           </div>
         </div>
-
+-->
         <div className="space-y-4">
           <h3 className="font-medium text-gray-700">Content Prompts</h3>
           <div className="space-y-4">
