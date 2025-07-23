@@ -1,30 +1,32 @@
-import React from 'react';
-import { Sparkles, AlertCircle } from 'lucide-react';
-import { useAppContext } from '../context/AppContext';
+import React from "react";
+import { Sparkles, AlertCircle } from "lucide-react";
+import { useAppContext } from "../context/AppContext";
 
 const GenerateButton: React.FC = () => {
-  const { 
-    prompts, 
-    csvData, 
-    apiSettings, 
-    isGenerating, 
+  const {
+    prompts,
+    csvData,
+    apiSettings,
+    isGenerating,
     generateArticles,
-    currentTemplate 
+    currentTemplate,
+    progressCurrent,
+    progressTotal,
   } = useAppContext();
 
-  const isDisabled = 
-    isGenerating || 
-    !csvData || 
-    prompts.length === 0 || 
+  const isDisabled =
+    isGenerating ||
+    !csvData ||
+    prompts.length === 0 ||
     !apiSettings.apiKey ||
     !currentTemplate;
 
   const getButtonMessage = () => {
-    if (!csvData) return 'Upload a CSV file first';
-    if (prompts.length === 0) return 'Add at least one prompt';
-    if (!apiSettings.apiKey) return 'Enter an OpenAI API key';
-    if (!currentTemplate) return 'Select a template';
-    return 'Generate Articles';
+    if (!csvData) return "Upload a CSV file first";
+    if (prompts.length === 0) return "Add at least one prompt";
+    if (!apiSettings.apiKey) return "Enter an OpenAI API key";
+    if (!currentTemplate) return "Select a template";
+    return "Generate Articles";
   };
 
   const handleClick = () => {
@@ -40,13 +42,17 @@ const GenerateButton: React.FC = () => {
         disabled={isDisabled}
         className={`
           flex items-center px-6 py-3 rounded-md text-white font-medium shadow-sm transform transition-all
-          ${isDisabled 
-            ? 'bg-gray-400 cursor-not-allowed opacity-70' 
-            : 'bg-teal-600 hover:bg-teal-700 hover:scale-[1.02] active:scale-[0.98]'}
+          ${
+            isDisabled
+              ? "bg-gray-400 cursor-not-allowed opacity-70"
+              : "bg-teal-600 hover:bg-teal-700 hover:scale-[1.02] active:scale-[0.98]"
+          }
         `}
       >
         <Sparkles className="h-5 w-5 mr-2" />
-        {isGenerating ? 'Generating...' : getButtonMessage()}
+        {isGenerating
+          ? `Generating... (${progressCurrent}/${progressTotal})`
+          : getButtonMessage()}
       </button>
 
       {isDisabled && !isGenerating && (

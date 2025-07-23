@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
-import Select from 'react-select';
-import { useAppContext } from '../context/AppContext';
+import React, { useState, useRef } from "react";
+import Select from "react-select";
+import { useAppContext } from "../context/AppContext";
 import {
   DndContext,
   closestCenter,
@@ -9,16 +9,16 @@ import {
   useSensor,
   useSensors,
   DragEndEvent,
-} from '@dnd-kit/core';
+} from "@dnd-kit/core";
 import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
   verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
-import { GripVertical } from 'lucide-react';
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+import { GripVertical } from "lucide-react";
 
 interface SortableItemProps {
   id: string;
@@ -42,7 +42,7 @@ const SortableItem: React.FC<SortableItemProps> = ({ id, onDragStart }) => {
   };
 
   const handleDragStart = (e: React.DragEvent) => {
-    e.dataTransfer.setData('text/plain', `{${id}}`);
+    e.dataTransfer.setData("text/plain", `{${id}}`);
     onDragStart(id);
   };
 
@@ -53,7 +53,7 @@ const SortableItem: React.FC<SortableItemProps> = ({ id, onDragStart }) => {
       draggable
       onDragStart={handleDragStart}
       className={`flex items-center gap-2 px-2 py-1 bg-gray-200 text-gray-700 rounded text-xs cursor-move ${
-        isDragging ? 'opacity-50' : ''
+        isDragging ? "opacity-50" : ""
       }`}
     >
       <button
@@ -70,13 +70,14 @@ const SortableItem: React.FC<SortableItemProps> = ({ id, onDragStart }) => {
 
 const InternalLinksManager: React.FC = () => {
   const { csvData, currentTemplate, updateTemplate } = useAppContext();
-  const [linkStructure, setLinkStructure] = useState('/{province}/{city}');
-  const [anchorTextStructure, setAnchorTextStructure] = useState('Idraulico a {city} ({linkCount} servizi)');
+  const [linkStructure, setLinkStructure] = useState("/{province}/{city}");
+  const [anchorTextStructure, setAnchorTextStructure] = useState(
+    "Idraulico a {city} ({linkCount} servizi)"
+  );
   const [groupByVariable, setGroupByVariable] = useState<string | null>(null);
   const [maxLinks, setMaxLinks] = useState(5);
   const [variables, setVariables] = useState<string[]>([]);
-  const [draggedVariable, setDraggedVariable] = useState<string | null>(null);
-  
+
   const linkInputRef = useRef<HTMLInputElement>(null);
   const anchorInputRef = useRef<HTMLInputElement>(null);
 
@@ -95,9 +96,16 @@ const InternalLinksManager: React.FC = () => {
 
   React.useEffect(() => {
     if (currentTemplate?.template?.internalLinks) {
-      const { linkFormat, titleFormat, groupBy, maxLinks: templateMaxLinks } = currentTemplate.template.internalLinks;
-      setLinkStructure(linkFormat || '/{province}/{city}');
-      setAnchorTextStructure(titleFormat || 'Idraulico a {city} ({linkCount} servizi)');
+      const {
+        linkFormat,
+        titleFormat,
+        groupBy,
+        maxLinks: templateMaxLinks,
+      } = currentTemplate.template.internalLinks;
+      setLinkStructure(linkFormat || "/{province}/{city}");
+      setAnchorTextStructure(
+        titleFormat || "Idraulico a {city} ({linkCount} servizi)"
+      );
       setGroupByVariable(groupBy || null);
       setMaxLinks(templateMaxLinks || 5);
     }
@@ -115,9 +123,9 @@ const InternalLinksManager: React.FC = () => {
           maxLinks,
           linkFormat: linkStructure,
           titleFormat: anchorTextStructure,
-          groupBy: groupByVariable || 'Provincia'
-        }
-      }
+          groupBy: groupByVariable || "Provincia",
+        },
+      },
     };
 
     updateTemplate(updatedTemplate);
@@ -133,23 +141,25 @@ const InternalLinksManager: React.FC = () => {
         return arrayMove(items, oldIndex, newIndex);
       });
     }
-    setDraggedVariable(null);
   };
 
   const handleInputDragOver = (e: React.DragEvent) => {
     e.preventDefault();
-    e.currentTarget.classList.add('ring-2', 'ring-teal-500');
+    e.currentTarget.classList.add("ring-2", "ring-teal-500");
   };
 
   const handleInputDragLeave = (e: React.DragEvent) => {
-    e.currentTarget.classList.remove('ring-2', 'ring-teal-500');
+    e.currentTarget.classList.remove("ring-2", "ring-teal-500");
   };
 
-  const handleInputDrop = (e: React.DragEvent, inputRef: React.RefObject<HTMLInputElement>) => {
+  const handleInputDrop = (
+    e: React.DragEvent,
+    inputRef: React.RefObject<HTMLInputElement>
+  ) => {
     e.preventDefault();
-    e.currentTarget.classList.remove('ring-2', 'ring-teal-500');
+    e.currentTarget.classList.remove("ring-2", "ring-teal-500");
 
-    const variable = e.dataTransfer.getData('text/plain');
+    const variable = e.dataTransfer.getData("text/plain");
     if (!inputRef.current) return;
 
     const input = inputRef.current;
@@ -157,8 +167,9 @@ const InternalLinksManager: React.FC = () => {
     const end = input.selectionEnd || 0;
     const value = input.value;
 
-    const newValue = value.substring(0, start) + variable + value.substring(end);
-    
+    const newValue =
+      value.substring(0, start) + variable + value.substring(end);
+
     if (input === linkInputRef.current) {
       setLinkStructure(newValue);
     } else if (input === anchorInputRef.current) {
@@ -179,9 +190,9 @@ const InternalLinksManager: React.FC = () => {
     );
   }
 
-  const columnOptions = csvData.headers.map(header => ({
+  const columnOptions = csvData.headers.map((header) => ({
     value: header,
-    label: header
+    label: header,
   }));
 
   return (
@@ -203,7 +214,8 @@ const InternalLinksManager: React.FC = () => {
             placeholder="/{province}/{city}"
           />
           <p className="text-xs text-gray-500">
-            Drag variables or use {'{variable}'} syntax to insert CSV column values in the URL structure
+            Drag variables or use {"{variable}"} syntax to insert CSV column
+            values in the URL structure
           </p>
         </div>
       </div>
@@ -225,7 +237,7 @@ const InternalLinksManager: React.FC = () => {
             placeholder="Idraulico a {city} ({linkCount} servizi)"
           />
           <p className="text-xs text-gray-500">
-            Use {'{linkCount}'} to show the number of services in the category
+            Use {"{linkCount}"} to show the number of services in the category
           </p>
         </div>
       </div>
@@ -255,7 +267,7 @@ const InternalLinksManager: React.FC = () => {
         </label>
         <div className="space-y-2">
           <Select
-            value={columnOptions.find(opt => opt.value === groupByVariable)}
+            value={columnOptions.find((opt) => opt.value === groupByVariable)}
             onChange={(option) => setGroupByVariable(option?.value || null)}
             options={columnOptions}
             isClearable
@@ -269,7 +281,9 @@ const InternalLinksManager: React.FC = () => {
       </div>
 
       <div className="bg-gray-50 p-4 rounded-md">
-        <h4 className="text-sm font-medium text-gray-700 mb-2">Available Variables</h4>
+        <h4 className="text-sm font-medium text-gray-700 mb-2">
+          Available Variables
+        </h4>
         <p className="text-xs text-gray-500 mb-3">
           Drag variables to reorder or into the input fields above
         </p>
@@ -284,10 +298,10 @@ const InternalLinksManager: React.FC = () => {
           >
             <div className="flex flex-wrap gap-2">
               {variables.map((variable) => (
-                <SortableItem 
-                  key={variable} 
+                <SortableItem
+                  key={variable}
                   id={variable}
-                  onDragStart={setDraggedVariable}
+                  onDragStart={() => {}}
                 />
               ))}
             </div>
