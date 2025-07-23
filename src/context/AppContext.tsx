@@ -136,7 +136,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [apiSettings, setApiSettings] = useState<APISettingsType>({
     apiKey: "",
-    model: "gpt-4",
+    model: "gpt-4o-mini",
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
